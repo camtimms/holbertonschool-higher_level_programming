@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentance):
     length = len(sentance)
-    
+
     if length == 0:
         first_char = None
     else:
