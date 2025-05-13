@@ -8,6 +8,7 @@ def new_tuple(tuple_a):
         new_tuple = tuple_a
     return (new_tuple)
 
+
 def add_tuple(tuple_a=(), tuple_b=()):
 
     tuple_a = new_tuple(tuple_a)
