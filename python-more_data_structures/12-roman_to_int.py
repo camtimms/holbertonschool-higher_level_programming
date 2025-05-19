@@ -12,6 +12,7 @@ def roman_to_int(roman_string):
         # Check if next value is more than the current and substract instead of add
         if i + 1 < len(roman_string) and roman_numerals[roman_string[i]] < roman_numerals[roman_string[i + 1]]:
             total += roman_numerals[roman_string[i+1]] - roman_numerals[roman_string[i]] 
+            i += 1
         else:
             total += roman_numerals[roman_string[i]]
         i += 1
