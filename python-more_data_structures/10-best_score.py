@@ -12,4 +12,4 @@ def best_score(a_dictionary):
         if value > score:
             score = value
             name = key
-    return(name)
+    return (name)
