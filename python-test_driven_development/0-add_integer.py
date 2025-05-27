@@ -6,7 +6,8 @@ This module provides a function to add two integers with proper type checking
 and error handling.
 """
 
-def add_integer (a, b = 98):
+
+def add_integer(a, b=98):
     """
     Given two integers, return the sum.
 
