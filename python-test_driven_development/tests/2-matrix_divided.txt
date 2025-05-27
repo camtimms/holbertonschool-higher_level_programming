@@ -26,12 +26,14 @@ TypeError: div must be a number
 
 matrix is not a matrix test:
 >>> matrix = {}
+>>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 matrix uneven rows test:
 >>> matrix = [[1, 2, 3],[4, 5, 6, 7]]
+>>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
     ...
 TypeError: Each row of the matrix must have the same size
