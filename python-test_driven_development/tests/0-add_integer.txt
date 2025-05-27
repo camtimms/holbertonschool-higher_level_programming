@@ -1,20 +1,63 @@
 """
-Given two integers, return the sum.
+Test file for add_integer function
 
-:param a: int
-:param b: int
-:return: int
+First, import the function:
+>>> add_integer = __import__('0-add_integer').add_integer
 
+Basic addition tests:
 >>> add_integer(1, 2)
-5
+3
 >>> add_integer(100, -2)
 98
+>>> add_integer(-1, -2)
+-3
+>>> add_integer(0, 0)
+0
+
+Test with default parameter:
 >>> add_integer(2)
 100
+
+Test with floats (should convert to int):
 >>> add_integer(100.3, -2)
 98
+>>> add_integer(1.7, 2.8)
+3
+>>> add_integer(-1.9, 1.1)
+0
+
+Test type errors:
 >>> add_integer(4, "School")
-b must be an integer
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer("Hello", 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
 >>> add_integer(None)
-a must be an integer
-"""
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(1, None)
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+Edge cases:
+>>> add_integer(float('inf'), 1)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(1, float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+Test very large numbers:
+>>> add_integer(999999999999999999, 1)
+1000000000000000000
