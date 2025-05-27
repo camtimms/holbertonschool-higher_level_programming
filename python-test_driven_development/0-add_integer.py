@@ -1,5 +1,17 @@
 #!/uar/bin/python3
+import doctest
+
 def add_integer (a, b = 98):
+    """
+    Given two integers, return the sum.
+
+    :param a: int
+    :param b: int
+    :return: int
+
+    >>> add_integer(2, 3)
+    5
+    """
     if type(a) not in (int, float):
         raise TypeError("a must be an integer")
     if type(b) not in (int, float):
