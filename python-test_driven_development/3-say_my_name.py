@@ -5,6 +5,7 @@ Module for say_my_name
 Function that prints the users name
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Prints the users name
