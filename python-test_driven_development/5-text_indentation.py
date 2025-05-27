@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This is a module for the text_indentation function 
+This is a module for the text_indentation function
 """
+
 
 def text_indentation(text):
     """
@@ -10,7 +11,12 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    for char in text:
+    i = 0
+    while i < len(text):
+        char = text[i]
         print(char, end="")
-        if char in (".","?",":"):
+        if char in (".", "?", ":"):
             print("\n\n", end="")
+            if i + 1 < len(text) and text[i + 1] == ' ':
+                i += 1
+        i +=1
