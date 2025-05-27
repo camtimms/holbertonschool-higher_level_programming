@@ -2,7 +2,7 @@
 '''
 Module for dividing all elements of a matrix
 
-
+Divides each element of a matrix by a divisor
 '''
 
 def matrix_divided(matrix, div):
