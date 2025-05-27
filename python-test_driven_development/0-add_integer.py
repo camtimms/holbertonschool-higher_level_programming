@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+Module for integer addition operations.
+
+This module provides a function to add two integers with proper type checking
+and error handling.
+"""
+
 def add_integer (a, b = 98):
     """
     Given two integers, return the sum.
