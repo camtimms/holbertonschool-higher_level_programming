@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import doctest
-
 def add_integer (a, b = 98):
     """
     Given two integers, return the sum.
