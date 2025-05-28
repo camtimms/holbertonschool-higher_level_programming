@@ -45,6 +45,10 @@ class Square:
         if self.size < 0:
             raise ValueError("size must be >= 0")
 
+        if self.size == 0:
+            print("")
+            return
+
         row = 0
         col = 0
 
