@@ -7,7 +7,7 @@ Module documentation: Prints a square
 class Square:
     """
     A class square which holds an atribute size and calculates
-    the area of the square. 
+    the area of the square.
 
     Can now also print the square of the size
     """
