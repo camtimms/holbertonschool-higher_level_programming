@@ -3,6 +3,7 @@
 Module documentation: My first class
 """
 
+
 class Square:
     """
     Empty class square
