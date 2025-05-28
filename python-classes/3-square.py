@@ -7,7 +7,7 @@ Module documentation: Adding in a new method to calculate the
 
 class Square:
     """
-    A class square which holds an atribute size and calculates 
+    A class square which holds an atribute size and calculates
     the area of the square
     """
     def __init__(self, size=0):
