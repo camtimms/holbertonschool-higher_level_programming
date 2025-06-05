@@ -17,7 +17,6 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
-
     @property
     def width(self):
         """width getter"""
@@ -76,4 +75,3 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
