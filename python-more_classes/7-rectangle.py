@@ -17,6 +17,7 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
     @property
     def width(self):
         """width getter"""
@@ -58,7 +59,7 @@ class Rectangle:
         return (perimeter)
 
     def __str__(self):
-        """A method that returns a rectangle with the print_symbol character """
+        """A method that returns a rectangle with the print_symbol character"""
         if self.height == 0 or self.width == 0:
             return ("")
         rectangle = ""
