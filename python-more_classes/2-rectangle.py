@@ -6,7 +6,7 @@ Module Documentation: Rectangle Class
 
 class Rectangle:
     """
-    Rectangle with width and height
+    Rectangle with width, height, area and perimeter
     """
 
     # Initalise Atributes
@@ -35,8 +35,19 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """height setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """calculates area"""
+        area = self.height * self.width
+        return (area)
+    
+    def perimeter(self):
+        """calculates perimeter"""
+        perimeter = 2*(self.height) + 2*(self.width)
+        return (perimeter)
