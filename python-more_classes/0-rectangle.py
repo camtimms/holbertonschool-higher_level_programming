@@ -8,5 +8,3 @@ class Rectangle:
     """
     Empty Class rectangle
     """
-    
-    
