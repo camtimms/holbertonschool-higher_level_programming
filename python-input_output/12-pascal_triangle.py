@@ -7,6 +7,7 @@ Return: List of list of ints
 
 
 def pascal_triangle(n):
+    """n: n levels of pascals triangle to generate"""
     if n <= 0:
         return ([])
 
