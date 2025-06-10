@@ -10,15 +10,17 @@ save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 load_to_json_file = __import__("6-load_from_json_file").load_from_json_file
 
 
-def add_item(arg, filename):
+def add_item(filename):
     """obj: Object to add, filename: Name of file"""
     try:
-        list = load_to_json_file(filename)
+        my_list = load_to_json_file(filename)
     except FileNotFoundError:
-        list = save_to_json_file("", filename)
+        my_list = []
+
     for arg in sys.argv[1:]:
-        list.append(arg)
-    save_to_json_file(list, filename)
+        my_list.append(arg)
+
+    save_to_json_file(my_list, filename)
 
 
-add_item(sys.argv, "add_item.json")
+add_item("add_item.json")
