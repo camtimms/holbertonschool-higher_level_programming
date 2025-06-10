@@ -9,5 +9,3 @@ Returns: JSON Object (dict)
 def class_to_json(obj):
     """obj: Instance of a class"""
     return (obj.__dict__)
-
-
