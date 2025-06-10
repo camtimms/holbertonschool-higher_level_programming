@@ -18,7 +18,7 @@ def add_item(arg, filename):
         list = save_to_json_file("", filename)
     for arg in sys.argv[1:]:
         list.append(arg)
-    save_to_json_file(l, filename)
+    save_to_json_file(list, filename)
 
 
 add_item(sys.argv, "add_item.json")
