@@ -21,3 +21,9 @@ class Student:
                 if attr in self.__dict__:
                     new_dict[attr] = self.__dict__[attr]
             return (new_dict)
+
+    def reload_from_json(self, json):
+        """Replaces values in instance"""
+        for attr in json:
+            if attr in self.__dict__:
+                self.__dict__[attr] = json[attr]
