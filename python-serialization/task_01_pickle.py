@@ -27,7 +27,7 @@ class CustomObject:
         """
 
         with open(filename, "wb") as f:
-            data = pickle.dump(self.__dict__, f)
+            data = pickle.dump(self, f)
             return (data)
 
     @classmethod
@@ -37,8 +37,8 @@ class CustomObject:
         filename: File name to load the data from
         """
         with open(filename, "rb") as f:
-            data = pickle.load(f)
-            return(data)
+            obj = pickle.load(f)
+            return(obj)
 
     def display(self):
         """
