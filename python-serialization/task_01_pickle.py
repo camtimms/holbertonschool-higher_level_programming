@@ -43,9 +43,11 @@ class CustomObject:
                 obj = pickle.load(f)
                 return (obj)
         except TypeError:
-            raise TypeError("Cannot deserialize object")
+            # raise TypeError("Cannot deserialize object")
+            return (None)
         except EOFError:
-            raise pickle.UnpicklingError("Corrupted pickle file")
+            # raise pickle.UnpicklingError("Corrupted pickle file")
+            return (None)
 
     def display(self):
 
