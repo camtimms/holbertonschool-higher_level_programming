@@ -44,6 +44,8 @@ class CustomObject:
                 return (obj)
         except TypeError:
             raise TypeError("Cannot deserialize object")
+        except EOFError:
+            raise EOFError("Corrupted pickle file")
 
     def display(self):
 
