@@ -2,7 +2,9 @@
 """
 Using the request library to fetch data from an API
 """
-import requests, csv
+import requests
+import csv
+
 
 def fetch_and_print_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts')
@@ -11,11 +13,12 @@ def fetch_and_print_posts():
     for post in data:
         print(post["title"])
 
+
 def fetch_and_save_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts')
     data = r.json()
-    with open("posts.csv", 'w') as f:
-        writer = csv.DictWriter(f,fieldnames=data[0].keys())
+    with open("posts.csv", 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=['id', 'title', 'body'],
+                                extrasaction='ignore')
         writer.writeheader()
         writer.writerows(data)
-
