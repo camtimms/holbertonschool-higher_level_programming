@@ -60,7 +60,7 @@ class Square:
         self._position = value
 
     def my_print(self):
-        """A function that prints a square with the character #"""
+        """A method that prints a square with the character #"""
         if self.size == 0:
             print("")
             return
