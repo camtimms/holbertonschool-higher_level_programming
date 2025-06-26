@@ -1,0 +1,3 @@
+--
+/*USE MYSQL;*/
+SHOW TABLES;
