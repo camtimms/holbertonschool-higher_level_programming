@@ -4,19 +4,22 @@ import sys
 
 def get_states(username, password, dbname):
     try:
-        # Connect to server
-        db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=dbname)
-        cur = db.cursor()
-        cur.execute("SELECT * FROM states ORDER BY id ASC")
+        # Connect to server (Use with for auto closing and management)
+        with MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=dbname) as db:
 
-        # Fetch and display results
-        results = cur.fetchall()
-        for row in results:
-            print(row)
+            with db.cursor() as cur:
+                cur.execute("SELECT * FROM states ORDER BY id ASC")
 
-        # Clean up
-        cur.close()
-        db.close()
+                # Fetch and display results
+                results = cur.fetchall()
+                for row in results:
+                    print(row)
+
     except MySQLdb.Error as e:
         print(f"MySQL Error: {e}")
 
