@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
 """
 Script that returns states form the states table
 """
+import MySQLdb
+import sys
 
 def get_states(username, password, dbname):
     """ Get all states from states db table"""
