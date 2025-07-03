@@ -25,11 +25,10 @@ def get_cities(username, password, dbname, state_name):
                             "ORDER BY cities.id ASC", (state_name,))
                 # Fetch and display results
                 results = cur.fetchall()
-                for row in results:
-                    for col in row:
-                        print(col, end="")
-                        if not row == -1:
-                            print(", ", end="")
+                for i, row in enumerate(results):
+                   print(row[0], end="")
+                   if i < len(results) - 1:
+                       print(", ", end="")
                 print()
 
     except MySQLdb.Error as e:
