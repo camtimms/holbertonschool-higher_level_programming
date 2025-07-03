@@ -18,7 +18,7 @@ def get_states(username, password, dbname, state_name):
                 db=dbname) as db:
 
             with db.cursor() as cur:
-                cur.execute(f"SELECT * FROM states "
+                cur.execute(f"SELECT * FROM states WHERE name "
                             f"LIKE '{state_name}%' ORDER BY id ASC")
                 # Fetch and display results
                 results = cur.fetchall()
