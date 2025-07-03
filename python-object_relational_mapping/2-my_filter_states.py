@@ -19,7 +19,7 @@ def get_states(username, password, dbname, state_name):
 
             with db.cursor() as cur:
                 cur.execute("SELECT * FROM states WHERE name "
-                            "LIKE '{}' ORDER BY id ASC".format(state_name))
+                            "LIKE BINARY '{}' ORDER BY id ASC".format(state_name))
                 # Fetch and display results
                 results = cur.fetchall()
                 for row in results:
