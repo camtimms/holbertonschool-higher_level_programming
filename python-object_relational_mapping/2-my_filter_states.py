@@ -6,8 +6,8 @@ import MySQLdb
 import sys
 
 
-def get_states(username, password, dbname):
-    """ Get all states from states db table starting with N"""
+def get_states(username, password, dbname, state_name):
+    """ Get all states from states db table"""
     try:
         # Connect to server (Use with for auto closing and management)
         with MySQLdb.connect(
@@ -18,8 +18,8 @@ def get_states(username, password, dbname):
                 db=dbname) as db:
 
             with db.cursor() as cur:
-                cur.execute("SELECT * FROM states WHERE name"
-                            " LIKE BINARY 'N%' ORDER BY id ASC")
+                cur.execute(f"SELECT * FROM states "
+                            f"LIKE '{state_name}%' ORDER BY id ASC")
                 # Fetch and display results
                 results = cur.fetchall()
                 for row in results:
@@ -30,4 +30,4 @@ def get_states(username, password, dbname):
 
 
 if __name__ == "__main__":
-    get_states(sys.argv[1], sys.argv[2], sys.argv[3])
+    get_states(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
