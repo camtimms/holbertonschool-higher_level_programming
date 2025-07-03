@@ -26,9 +26,9 @@ def get_cities(username, password, dbname, state_name):
                 # Fetch and display results
                 results = cur.fetchall()
                 for i, row in enumerate(results):
-                   print(row[0], end="")
-                   if i < len(results) - 1:
-                       print(", ", end="")
+                    print(row[0], end="")
+                    if i < len(results) - 1:
+                        print(", ", end="")
                 print()
 
     except MySQLdb.Error as e:
