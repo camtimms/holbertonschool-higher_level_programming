@@ -14,7 +14,6 @@ def get_states(username, password, dbname):
 
             with db.cursor() as cur:
                 cur.execute("SELECT * FROM states ORDER BY id ASC")
-
                 # Fetch and display results
                 results = cur.fetchall()
                 for row in results:
