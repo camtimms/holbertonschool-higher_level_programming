@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+"""
+Script that returns states form the states table
+"""
 
 def get_states(username, password, dbname):
+    """ Get all states from states db table"""
     try:
         # Connect to server (Use with for auto closing and management)
         with MySQLdb.connect(
