@@ -5,16 +5,17 @@ Script that returns states form the states table
 import MySQLdb
 import sys
 
+
 def get_states(username, password, dbname):
     """ Get all states from states db table"""
     try:
         # Connect to server (Use with for auto closing and management)
         with MySQLdb.connect(
-            host="localhost",
-            port=3306,
-            user=username,
-            passwd=password,
-            db=dbname) as db:
+                host="localhost",
+                port=3306,
+                user=username,
+                passwd=password,
+                db=dbname) as db:
 
             with db.cursor() as cur:
                 cur.execute("SELECT * FROM states ORDER BY id ASC")
