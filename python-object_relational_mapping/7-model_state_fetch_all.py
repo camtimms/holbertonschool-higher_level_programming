@@ -10,7 +10,7 @@ from model_state import Base, State
 def get_state(username, password, database_name):
     # Connect to the database through the engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        username, password, database_name), echo=True)
+        username, password, database_name))
 
     # Bind the engine to the session class and create a session instance
     session = sessionmaker(bind=engine)
