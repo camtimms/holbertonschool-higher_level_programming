@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+
 def get_state(username, password, database_name):
     # Connect to the database through the engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -23,6 +24,7 @@ def get_state(username, password, database_name):
             print(f"{state.id}: {state.name}")
     finally:
         session.close()
+
 
 if __name__ == "__main__":
     get_state(sys.argv[1], sys.argv[2], sys.argv[3])
