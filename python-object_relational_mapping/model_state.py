@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 """ State model to be used to create the states table using SQL Alchemy
 """
 
