@@ -18,6 +18,6 @@ if (args.length <= 1) {
       prevLargest = num;
     }
   }
+  console.log(prevLargest);
 }
 
-console.log(prevLargest);
