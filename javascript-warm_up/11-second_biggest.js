@@ -20,4 +20,3 @@ if (args.length <= 1) {
   }
   console.log(prevLargest);
 }
-
