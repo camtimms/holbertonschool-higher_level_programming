@@ -12,7 +12,7 @@ function factorial (a) {
 }
 
 if (isNaN(num)) {
-  console.log('Missing number');
+  console.log('1');
 } else {
   console.log(factorial(num));
 }
