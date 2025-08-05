@@ -2,14 +2,14 @@
 
 const args = process.argv.slice(2);
 
-try {
+if (!args[0]) {
+  console.log('Not a number');
+} else {
   const num = parseInt(args[0]);
 
   if (isNaN(num)) {
-    throw new Error('Invalid number')
+    console.log('Not a number');
+  } else {
+    console.log(`My number: ${num}`);
   }
-  console.log(`My number: ${num}`)
-}
-catch (error) {
-  console.log('Not a number')
 }
