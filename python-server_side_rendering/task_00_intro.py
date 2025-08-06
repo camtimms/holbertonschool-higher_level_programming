@@ -20,8 +20,17 @@ def generate_invitations(template, attendees):
         raise TypeError("Not all elements in attendees are dicts")
 
     # Use a loop to map the dict values into the string
-    for i, attendee in enumerate(attendees):
-        invitation = template.format_map(attendee)
+    for i, attendee in enumerate(attendees, 1):
+        # Format each attendee
+        cleaned_attendee = {}
+        for key, value in attendee.items():
+            if value is None:
+                cleaned_attendee[key] = "N/A"
+            else:
+                cleaned_attendee[key] = value
+
+        # Use edited attendee to format the invitation
+        invitation = template.format_map(cleaned_attendee)
         try:
             with open(f"output_{i}.txt", "w") as f:
                 f.write(invitation)
