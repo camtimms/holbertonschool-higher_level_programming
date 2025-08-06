@@ -30,7 +30,7 @@ def generate_invitations(template, attendees):
         cleaned_attendee = {}
         for key, value in attendee.items():
             if value is None:
-                cleaned_attendee[key] = "N/A"
+                cleaned_attendee[key] = f"{key}:N/A"
             else:
                 cleaned_attendee[key] = value
 
