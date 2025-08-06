@@ -27,7 +27,13 @@ def generate_invitations(template, attendees):
     # Use a loop to map the dict values into the string
     for i, attendee in enumerate(attendees, 1):
         # Format each attendee
-        cleaned_attendee = {}
+        cleaned_attendee = {
+            "name": attendee.get("name", "N/A"),
+            "event_title": attendee.get("event_title", "N/A"),
+            "event_date": attendee.get("event_date", "N/A"),
+            "event_location": attendee.get("event_location", "N/A")
+        }
+        # Check if value is None
         for key, value in attendee.items():
             if value is None:
                 cleaned_attendee[key] = f"{key}:N/A"
