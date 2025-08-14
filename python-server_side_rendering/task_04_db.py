@@ -44,7 +44,8 @@ def products():
         error_message = "Wrong source"
         return render_template('product_display.html',
                             products=product_data,
-                            error=error_message)
+                            headers=headers,
+                            error_message=error_message)
 
     # Read Data
     if source == 'json':
@@ -78,6 +79,7 @@ def products():
                     'category': row['category'],
                     'price': row['price']
                 })
+            headers = list(product_data[0].keys())
         except sqlite3.Error:
             error_message = "File not found"
         finally:
